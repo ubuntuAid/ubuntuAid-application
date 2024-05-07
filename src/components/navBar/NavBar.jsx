@@ -1,28 +1,46 @@
 // import React from 'react'
 
+import { Link } from "react-router-dom";
+
 function NavBar() {
   return (
     <div>
       {/* Search & Language */}
-      <div>
-        <div>
-          <span><i className='bx bx-search' ></i></span>
-          <button>English</button>
+      <div className="flex justify-end w-[70%] m-auto border-b-2">
+        <div className="flex justify-between w-auto">
+          <span>
+            <i className="bx bx-search w-10 text-center text-xl py-1 mx-5 text-[#6AA84F] font-Roboto font-medium"></i>
+          </span>
+          <button className="text-center px-10 py-1 bg-[#F4F4F4] w-[12rem] text-[#6AA84F] font-Roboto font-medium">English</button>
         </div>
       </div>
       {/* Logo and the two buttons */}
       <div>
-        <div>
-          <img src="/src/assets/ubuntuAid-logo.svg" alt="ubuntuAid Logo" />
-        </div>
-        <div>
-          <button><span><i className='bx bx-heart'></i></span>Donate</button>
-          <button><span><i className='bx bx-info-circle' ></i></span>Get Help</button>
+        <div className="flex justify-between py-4 items-center w-[70%] m-auto">
+          <div>
+            <Link to={'/'}>
+              <img src="/src/assets/ubuntuAid-logo.svg" alt="ubuntuAid Logo" />
+            </Link>
+          </div>
+          <div className="flex gap-4">
+            <button className="text-white bg-[#0072BC] px-2 py-1 rounded items-center gap-2 flex font-Roboto font-bold">
+              <span>
+                <i className="bx bx-heart"></i>
+              </span>
+              DONATE
+            </button>
+            <button className="text-white bg-[#6AA84F] px-2 py-1 rounded items-center gap-2 flex font-Roboto font-bold">
+              <span>
+                <i className="bx bx-info-circle"></i>
+              </span>
+              Get Help
+            </button>
+          </div>
         </div>
       </div>
       {/* Navigation Links */}
-      <div>
-        <ul className="flex">
+      <div className="bg-[#6AA84F]">
+        <ul className="flex item-center gap-16 mx-auto text-white py-3 w-[70%] font-Roboto font-bold">
           <li>About UbuntuAid</li>
           <li>What We Do</li>
           <li>UbuntuAiders</li>
