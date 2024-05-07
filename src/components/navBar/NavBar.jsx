@@ -2,8 +2,8 @@
 
 function NavBar() {
   return (
-    <div>NavBar</div>
+    <div>This is a NavBar</div>
   )
 }
 
-export default NavBar
+export default NavBar;
