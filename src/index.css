@@ -1,3 +1,20 @@
+
+/* Global Variable */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+/* Home-Page Hero Section BG Image */
+#bg_image{
+    background-image: url('/src/assets/UbuntuAid-Hero.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: calc(100dvh - 192px);
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
