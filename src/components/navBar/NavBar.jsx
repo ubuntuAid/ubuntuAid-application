@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
-    <div>
+    <div className="h-48">
       {/* Search & Language */}
       <div className="flex justify-end w-[70%] m-auto border-b-2">
         <div className="flex justify-between w-auto">
@@ -39,7 +39,7 @@ function NavBar() {
         </div>
       </div>
       {/* Navigation Links */}
-      <div className="bg-[#6AA84F]">
+      <div className="bg-[#6AA84F] my-3">
         <ul className="flex item-center gap-16 mx-auto text-white py-3 w-[70%] font-Roboto font-bold">
           <li>About UbuntuAid</li>
           <li>What We Do</li>
