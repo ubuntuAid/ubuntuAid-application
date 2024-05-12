@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import CarouselCard from "../carouselCard/CarouselCard";
 import NavBar from "../navBar/NavBar";
 
 function HomePage() {
@@ -27,6 +28,9 @@ function HomePage() {
             {/* <h1>Just for styling</h1> */}
           </div>
         </div>
+      </section>
+      <section>
+        <CarouselCard />
       </section>
     </div>
   );
