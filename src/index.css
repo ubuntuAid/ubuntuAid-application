@@ -20,3 +20,11 @@
     width: 100%;
     height: calc(100dvh - 192px);
 }
+.slick-slide > div {
+    margin: 0 10px;
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color:#0A72BA !important;
+  }
+  

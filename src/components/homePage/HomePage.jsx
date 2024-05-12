@@ -2,6 +2,7 @@
 import CarouselCard from "../carouselCard/CarouselCard";
 import NavBar from "../navBar/NavBar";
 
+
 function HomePage() {
   return (
     <div>
@@ -29,8 +30,8 @@ function HomePage() {
           </div>
         </div>
       </section>
-      <section>
-        <CarouselCard />
+      <section className="bg-[#dfdfdf]">
+          <CarouselCard />
       </section>
     </div>
   );
