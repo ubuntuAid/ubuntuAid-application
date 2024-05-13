@@ -1,9 +1,27 @@
+/* eslint-disable react/prop-types */
 // import React from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function CarouselCard() {
+    const SamplePrevArrow = (props) => {
+        const { className, onClick } = props;
+        return(
+          <div onClick={onClick} className={`arrow ${className}`} >
+            <img src="/src/assets/exports/Prev-Button.png" alt="next-arrow" />
+          </div>
+        )
+        }
+  
+   function SampleNextArrow(props) {
+        const { className, onClick } = props;
+        return(
+          <div onClick={onClick} className={`arrow ${className}`} >
+             <img src="/src/assets/exports/Next-Button.png" alt="next-arrow" />
+          </div>
+        )
+      }
     const settings = {
         dots: true,
         infinite: true,
@@ -11,6 +29,8 @@ function CarouselCard() {
         slidesToShow: 3,
         slidesToScroll: 3,
         initialSlide: 0,
+        nextArrow: <SampleNextArrow to="next"/>,
+        prevArrow: <SamplePrevArrow to="prev" />,
         responsive: [
         {
             breakpoint: 1024,
@@ -42,20 +62,20 @@ function CarouselCard() {
     <div className="w-[70%] m-auto">
         <Slider {...settings}>
             {data.map((d) => (
-                <div key={d.id} className="border border-gray-200 w-1/4 my-5 p-5">
+                <div key={d.id} className="border border-gray-300 rounded-xl w-1/4 my-5 p-5">
                     <div>
-                        <div className="flex items-center gap-5 mb-5">
+                        <div className="flex gap-5 mb-5">
                             <div>
                             <img src={d.profilePic} alt="AiderImage" />
                             </div>
                             <div>
-                            <h1>{d.name}</h1>
+                            <h1 className="text-xl font-bold text-[#0A72BA] mb-1">{d.name}</h1>
                             <div className="flex items-center gap-2">
                                 <div>
                                     <img src={d.reviewStars} alt="reviewStars" />
                                 </div>
                                 <p>
-                                {d.reviewCount} <span>review</span>
+                                {d.reviewCount}{''} <span>{d.reviewCount === 1 ? 'review' : 'reviews'}</span>
                                 </p>
                             </div>
                             <h3>Location</h3>

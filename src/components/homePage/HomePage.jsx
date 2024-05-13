@@ -2,7 +2,6 @@
 import CarouselCard from "../carouselCard/CarouselCard";
 import NavBar from "../navBar/NavBar";
 
-
 function HomePage() {
   return (
     <div>
@@ -11,7 +10,9 @@ function HomePage() {
       <section id="bg_image" className="flex justify-evenly items-center">
         <div className="w-[70%]">
           <div className="flex-1 w-1/2 ">
-            <h1 className="text-7xl font-black text-white mb-5 leading-[1.15]">Restoring Hope, Building Futures</h1>
+            <h1 className="text-7xl font-black text-white mb-5 leading-[1.15]">
+              Restoring Hope, Building Futures
+            </h1>
             <p className="text-xl mb-5 text-white">
               At UbuntuAid, we empower refugees by democratizing access to
               justice, placing the law's power directly into their hands.
@@ -25,13 +26,16 @@ function HomePage() {
               </button>
             </div>
           </div>
-          <div className="flex-none w-1/4" >
+          <div className="flex-none w-1/4">
             {/* <h1>Just for styling</h1> */}
           </div>
         </div>
       </section>
-      <section className="bg-[#dfdfdf]">
-          <CarouselCard />
+      <section className="my-40">
+        <h1 className="text-center text-[3rem] mb-10 font-bold text-[#6AA84D]">
+          UbuntuAiders ready to support you!
+        </h1>
+        <CarouselCard />
       </section>
     </div>
   );
