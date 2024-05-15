@@ -41,9 +41,11 @@ function NavBar() {
       {/* Navigation Links */}
       <div className="bg-[#6AA84F] my-3">
         <ul className="flex item-center gap-16 mx-auto text-white py-3 w-[70%] font-Roboto font-bold">
-          <li>About UbuntuAid</li>
-          <li>What We Do</li>
-          <li>UbuntuAiders</li>
+            <li>About UbuntuAid</li>
+            <li>What We Do</li>
+          <Link to={'/ubuntuaiders'}>
+            <li>UbuntuAiders</li>
+          </Link>
           <li>UbuntuAid Resource</li>
           <li>Get Involved</li>
         </ul>
