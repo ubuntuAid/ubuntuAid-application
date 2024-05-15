@@ -8,9 +8,9 @@ function HomePage() {
       <NavBar />
       {/* This is the Hero Section of the Landing Page */}
       <section id="bg_image" className="flex justify-evenly items-center">
-        <div className="w-[70%]">
-          <div className="flex-1 md:w-1/2 ">
-            <h1 className="md:text-7xl text-3xl font-black text-white mb-5 md:leading-[1.15]">
+        <div className="md:w-[70%]">
+          <div className="md:flex-1 md:w-1/2 ">
+            <h1 className="lg:text-7xl text-3xl font-black text-white mb-5 md:leading-[1.15]">
               Restoring Hope, Building Futures
             </h1>
             <p className="text-xl mb-5 text-white">
@@ -26,7 +26,7 @@ function HomePage() {
               </button>
             </div>
           </div>
-          <div className="flex-none w-1/4">
+          <div className="md:flex-none md:w-1/4">
             {/* <h1>Just for styling</h1> */}
           </div>
         </div>
