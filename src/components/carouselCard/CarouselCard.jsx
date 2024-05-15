@@ -105,7 +105,7 @@ let [aiders, setAiders] = useState(null);
                               </div>
                               <div className="flex items-center gap-3 my-1">
                                   <div>
-                                  <h3><span>UbuntuRating</span> <span>{item.attributes.ubuntuRating}</span></h3>
+                                    <h3><span>UbuntuRating</span> <span>{item.attributes.ubuntuRating}</span></h3>
                                   </div>
                                   <div>
                                       <img src="/src/assets/exports/info-circleInfo-Alert.png" alt="info-circleInfo-Alert" />
@@ -114,28 +114,28 @@ let [aiders, setAiders] = useState(null);
                               <h3>Location</h3>
                               <div className="flex items-center gap-2">
                                   <div>
-                                      <img src="/src/assets/exports/map-marker.png" alt="location icon"/>
+                                    <img src="/src/assets/exports/map-marker.png" alt="location icon"/>
                                   </div>
                                   <p>{item.attributes.aiderLocation}</p>
                               </div>
                           </div>
                       </div>
                       <div className="border-b border-gray-200">
-                      <h3 className="font-semibold">PRACTICE AREA</h3>
-                      <h4 className="pb-1">{item.attributes.practiceArea}</h4>
+                        <h3 className="font-semibold">PRACTICE AREA</h3>
+                        <h4 className="pb-1">{item.attributes.practiceArea}</h4>
                       </div>
                       <div>
-                      <p className="py-2 font-medium">{item.attributes.reviewTitle}</p>
-                      <div className="flex items-center gap-2">
-                          <div>
-                              <img src={`http://localhost:1337${item.attributes.reviewerStars.data.attributes.url}`} alt="reviewStars" />
-                          </div>
-                          <p className="text-sm">
-                          <span>By</span> <span className="pr-2">{item.attributes.reviewerName}</span>                       
-                          <span>{item.attributes.reviewDate}</span>
-                          </p>
-                      </div>
-                      <p className="my-2">{item.attributes.review}</p>
+                        <p className="py-2 font-medium">{item.attributes.reviewTitle}</p>
+                        <div className="flex items-center gap-2">
+                            <div>
+                                <img src={`http://localhost:1337${item.attributes.reviewerStars.data.attributes.url}`} alt="reviewStars" />
+                            </div>
+                            <p className="text-sm">
+                            <span>By</span> <span className="pr-2">{item.attributes.reviewerName}</span>                       
+                            <span>{item.attributes.reviewDate}</span>
+                            </p>
+                        </div>
+                        <p className="my-2">{item.attributes.review}</p>
                       </div>
                     </div>
                       <div>

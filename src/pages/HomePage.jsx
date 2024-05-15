@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
-import CarouselCard from "../carouselCard/CarouselCard";
-import NavBar from "../navBar/NavBar";
+import CarouselCard from "../components/carouselCard/CarouselCard";
+import NavBar from "../components/navBar/NavBar";
 
 function HomePage() {
   return (
@@ -9,8 +9,8 @@ function HomePage() {
       {/* This is the Hero Section of the Landing Page */}
       <section id="bg_image" className="flex justify-evenly items-center">
         <div className="w-[70%]">
-          <div className="flex-1 w-1/2 ">
-            <h1 className="text-7xl font-black text-white mb-5 leading-[1.15]">
+          <div className="flex-1 md:w-1/2 ">
+            <h1 className="md:text-7xl text-3xl font-black text-white mb-5 md:leading-[1.15]">
               Restoring Hope, Building Futures
             </h1>
             <p className="text-xl mb-5 text-white">

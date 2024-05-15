@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
-import HomePage from './components/homePage/HomePage'
+import HomePage from './pages/HomePage'
+import UbuntuAiders from './pages/UbuntuAiders';
 import './App.css'
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <>
     <Routes>
           <Route path='/' element={<HomePage/>} />
+          <Route path='/ubuntuaiders' element={<UbuntuAiders />} />
     </Routes>
     </>
   )
