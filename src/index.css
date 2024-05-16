@@ -40,5 +40,6 @@
   #aboutImage{
     background-image: url(/src/assets/Frame\ 13.png);
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
   }
