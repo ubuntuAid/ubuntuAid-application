@@ -1,7 +1,12 @@
+import AiderHero from "../components/AiderHero"
+import NavBar from "../components/navBar/NavBar"
 
 function UbuntuAiders() {
   return (
-    <div>UbuntuAiders</div>
+    <div>
+      <NavBar />
+      <AiderHero />
+    </div>
   )
 }
 
