@@ -37,6 +37,7 @@ function HomePage() {
         </h1>
         <CarouselCard />
       </section>
+      <ul>li*</ul>
     </div>
   );
 }
