@@ -27,3 +27,8 @@
   .slick-dots li.slick-active button:before {
     color:#0A72BA !important;
   }
+  #footer h1{
+    color: #2E2E2E;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }

@@ -1,6 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import CarouselCard from "../components/carouselCard/CarouselCard";
 import NavBar from "../components/navBar/NavBar";
+import Footer from "../components/footer/Footer";
+
 
 function HomePage() {
   return (
@@ -37,6 +39,7 @@ function HomePage() {
         </h1>
         <CarouselCard />
       </section>
+      <Footer />
       <ul>li*</ul>
     </div>
   );
