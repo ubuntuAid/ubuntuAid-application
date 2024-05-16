@@ -32,3 +32,13 @@
     font-size: 1.25rem;
     font-weight: 600;
   }
+  #hero{
+    background-image: url(/src/assets/about-Herobg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #aboutImage{
+    background-image: url(/src/assets/Frame\ 13.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
