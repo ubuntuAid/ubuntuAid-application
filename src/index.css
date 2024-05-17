@@ -32,14 +32,13 @@
     font-size: 1.25rem;
     font-weight: 600;
   }
-<<<<<<< HEAD
 
   #aiderhero{
     background-image: url(/src/assets/Rectangle\ 23.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-=======
+  }
   #hero{
     background-image: url(/src/assets/about-Herobg.png);
     background-repeat: no-repeat;
@@ -50,5 +49,4 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
->>>>>>> 8986799d302d8d6786c741c126ae248e3b4dffdd
   }
