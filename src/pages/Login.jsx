@@ -11,7 +11,7 @@ function Login() {
 
     return (
         <div className='md:flex md:h-screen justify-between items-center'>
-            <div className='md:w-1/2 h-[100%]'>
+            <div className='md:w-1/2 h-[100%] flex flex-col justify-around'>
                 <div className='flex justify-between items-center p-10'>
                     <Link to={'/'}><img src="/src/assets/ubuntuAid-logo.svg" alt="" /></Link>
                     <div className='flex text-[#0a72BA]'>
@@ -21,7 +21,7 @@ function Login() {
                         <p>Go Back</p>
                     </div>
                 </div>
-                <div className='py-16 md:px-32 px-10'>
+                <div className='md:px-32 px-10'>
                     <h1 className='md:text-4xl font-bold mb-2'>Sign in</h1>
                     <form action="">
                         <label htmlFor="email">Enter your email to receive a one-time passcode</label><br />
