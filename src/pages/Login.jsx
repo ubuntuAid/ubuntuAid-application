@@ -12,7 +12,7 @@ function Login() {
     return (
         <div className='md:flex md:h-screen justify-between items-center'>
             <div className='md:w-1/2 md:h-[100%] h-screen flex flex-col md:justify-around justify-evenly'>
-                <div className='flex justify-between items-center p-10'>
+                <div className='flex justify-between items-center md:px-32 p-10'>
                     <Link to={'/'}><img src="/src/assets/ubuntuAid-logo.svg" alt="" /></Link>
                     <div className='md:flex gap-2 font-bold hidden text-[#0a72BA]'>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
