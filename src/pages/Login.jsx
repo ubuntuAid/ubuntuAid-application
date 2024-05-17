@@ -10,19 +10,19 @@ function Login() {
 
 
     return (
-        <div>
-            <div>
-                <div>
+        <div className='flex h-screen justify-between  items-center'>
+            <div className='w-1/2 h-[100%]'>
+                <div className='flex justify-between items-center p-10'>
                     <Link to={'/'}><img src="/src/assets/ubuntuAid-logo.svg" alt="" /></Link>
-                    <div>
+                    <div className='flex'>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                         </svg>
                         <p>Go Back</p>
                     </div>
                 </div>
-                <div>
-                    <h1></h1>
+                <div className='p-[100px]'>
+                    <h1 className='md:text-4xl font-bold'>Sign in</h1>
                     <form action="">
                         <label htmlFor="email">Enter your email to receive a one-time passcode</label>
                         <input type="email" name="email" id="email" placeholder='Email Address' />
@@ -32,10 +32,10 @@ function Login() {
                     <div><hr /><p>or</p><hr /></div>
                     <button>Sign in with Password</button>
                 </div>
-                <p>Need an account? <Link to={'/'}>Sign Up Here</Link></p>
+                <p className='text-center'>Need an account? <Link to={'/'}>Sign Up Here</Link></p>
             </div>
-            <div>
-                <div><img src="/src/assets/signChildren.png" alt="" /></div>
+            <div className='w-1/2 px-16'>
+                <img src="/src/assets/signChildren.png" alt="" />
             </div>
         </div>
     )
