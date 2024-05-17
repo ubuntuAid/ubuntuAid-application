@@ -32,7 +32,7 @@ function Login() {
                     <div><hr /><p>or</p><hr /></div>
                     <button>Sign in with Password</button>
                 </div>
-                <p className='text-center'>Need an account? <Link to={'/'}>Sign Up Here</Link></p>
+                <p className='text-center'>Need an account? <Link to={'/signup'}>Sign Up Here</Link></p>
             </div>
             <div className='w-1/2 px-16'>
                 <img src="/src/assets/signChildren.png" alt="" />
