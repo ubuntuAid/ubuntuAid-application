@@ -29,12 +29,7 @@ function NavBar() {
               </span>
               DONATE
             </button>
-            <button className="text-white bg-[#6AA84F] px-2 py-1 rounded items-center gap-2 flex font-Roboto font-bold">
-              <span>
-                <i className="bx bx-info-circle"></i>
-              </span>
-              Get Help
-            </button>
+            <Link to={'/login'}>Sign In</Link>
           </div>
         </div>
       </div>
