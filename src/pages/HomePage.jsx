@@ -40,6 +40,7 @@ function HomePage() {
         <CarouselCard />
       </section>
       <Footer />
+      <ul>li*</ul>
     </div>
   );
 }
