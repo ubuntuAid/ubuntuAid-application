@@ -5,7 +5,7 @@ function Footer() {
   return (
     <>
     <section className='bg-[#6AA84F] py-10'>
-        <div className='max-w-[1100px] m-auto text-white' id='footer'>
+        <div className='max-w-[70%] m-auto text-white' id='footer'>
             <div className='flex justify-between'>
                 <div>
                     <h1>Browse Our Site</h1>
