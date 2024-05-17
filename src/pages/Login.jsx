@@ -32,7 +32,7 @@ function Login() {
                     <div className='flex justify-between items-center my-2'><hr className='w-1/2'/><p className='px-4'>or</p><hr className='w-1/2' /></div>
                     <button className='w-full bg-[#6AA84F] rounded p-2 my-2 text-center font-medium text-white'>Sign in with Password</button>
                 </div>
-                <p className='text-center'>Need an account? <Link to={'/'} className='font-bold underline'>Sign Up Here</Link></p>
+                <p className='text-center'>Need an account? <Link to={'/signup'} className='font-bold underline'>Sign Up Here</Link></p>
             </div>
             <div className='md:w-1/2 px-16 w-full md:flex hidden'>
                 <img src="/src/assets/signChildren.png" alt="" />
