@@ -2,6 +2,7 @@
 import CarouselCard from "../components/carouselCard/CarouselCard";
 import NavBar from "../components/navBar/NavBar";
 import Footer from "../components/footer/Footer";
+import { Link } from "react-router-dom";
 
 
 function HomePage() {
@@ -20,12 +21,12 @@ function HomePage() {
               justice, placing the law's power directly into their hands.
             </p>
             <div className="flex gap-5">
-              <button className="text-white bg-[#0072BC] px-2 py-1 rounded font-bold w-52">
+              <Link to={'/login'} className="text-white bg-[#0072BC] px-2 py-1 rounded font-bold w-52 flex justify-center items-center">
                 GET HELP
-              </button>
-              <button className="text-white bg-[#6AA84F] px-2 py-2 rounded font-bold w-52">
+              </Link>
+              <Link to={'/login'} className="text-white bg-[#6AA84F] px-2 py-2 rounded font-bold w-52 flex justify-center items-center">
                 OFFER AID
-              </button>
+              </Link>
             </div>
           </div>
           <div className="md:flex-none md:w-1/4">
