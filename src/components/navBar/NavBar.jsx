@@ -11,14 +11,16 @@ function NavBar() {
           <span>
             <i className="bx bx-search w-10 text-center text-xl py-1 mx-5 text-[#6AA84F] font-Roboto font-medium"></i>
           </span>
-          <button className="text-center px-10 py-1 bg-[#F4F4F4] w-[12rem] text-[#6AA84F] font-Roboto font-medium">English</button>
+          <button className="text-center px-10 py-1 bg-[#F4F4F4] w-[12rem] text-[#6AA84F] font-Roboto font-medium">
+            English
+          </button>
         </div>
       </div>
       {/* Logo and the two buttons */}
       <div>
         <div className="flex justify-between py-4 items-center w-[70%] m-auto">
           <div>
-            <Link to={'/'}>
+            <Link to={"/"}>
               <img src="/src/assets/ubuntuAid-logo.svg" alt="ubuntuAid Logo" />
             </Link>
           </div>
@@ -29,18 +31,26 @@ function NavBar() {
               </span>
               DONATE
             </button>
-            <Link to={'/login'}>Sign In</Link>
+            <Link
+              to={"/login"}
+              className="text-white bg-[#6AA84F] px-4 py-1 rounded items-center gap-2 flex font-Roboto font-bold"
+            >
+              <span>
+              <i className='bx bxs-user-plus'></i>
+              </span>
+              Sign In
+            </Link>
           </div>
         </div>
       </div>
       {/* Navigation Links */}
       <div className="bg-[#6AA84F] my-3">
         <ul className="flex item-center gap-16 mx-auto text-white py-3 w-[70%] font-Roboto font-bold">
-          <Link to={'/about'}>
+          <Link to={"/about"}>
             <li>About UbuntuAid</li>
           </Link>
-            <li>What We Do</li>
-          <Link to={'/ubuntuaiders'}>
+          <li>What We Do</li>
+          <Link to={"/ubuntuaiders"}>
             <li>UbuntuAiders</li>
           </Link>
           <li>UbuntuAid Resource</li>
