@@ -18,4 +18,31 @@ UbuntuAid serves as a platform for launching advocacy campaigns to raise awarene
 # Why Now?  
 In a region confronted by over 6.3 million refugees (UNHCR report 2019) with Uganda as the highest refugee host in Africa due to the levels of conflicts and displacements, and with the need for humanitarian aid exceeding available funding, a new way of working with refugees/displaced persons and their migrant communities is a necessity if we are to prepare them for a life beyond “from hand to mouth syndrome” which about 95% of humanitarian aid is all about.  
 
+# 🚀 Getting started with UbuntuAid-Application
+
+UbuntuAid-Application comes with a full featured [Command Line Interface] (CLI) which lets you scaffold and manage the project in seconds.
+
+### `clone`
+
+After cloning this project on your desired loaction on the local server, 
+
+```
+npm install
+# or
+yarn install
+```
+
+to install all the dependencies required to run the application smoothly
+
+
+### `develop`
+
+Start the application;
+
+```
+npm run dev
+# or
+yarn dev
+```
+
 
