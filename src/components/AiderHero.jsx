@@ -29,7 +29,7 @@ function AiderHero() {
               <h1 className="text-5xl font-bold text-[#0A72BA] mb-3">{aider.attributes.AiderName}</h1>
               <div className="flex items-center gap-2 mb-1">
                 <div>
-                  <img src="/src/assets/exports/LinkDaine-Rate.png" alt="" />
+                  <img src="/exports/LinkDaine-Rate.png" alt="" />
                 </div>
                 <p className="text-[#0A72BA]">{aider.attributes.reviewsCount}{''} <span>{aider.attributes.reviewsCount === 1 ? 'review' : 'reviews'}</span></p>
               </div>
@@ -37,14 +37,14 @@ function AiderHero() {
                 <span>UbuntuAid Rating</span>
                 <span>{aider.attributes.ubuntuRating}</span>
                 <div>
-                  <img src="/src/assets/exports/info-circleInfo-Alert.png" alt="" />
+                  <img src="/exports/info-circleInfo-Alert.png" alt="" />
                 </div>
               </div>
               <div>
                 <p className="font-bold">LOCATION</p>
                 <div className="flex items-center gap-2">
                   <div>
-                    <img src="/src/assets/exports/map-marker.png" alt="" />
+                    <img src="/exports/map-marker.png" alt="" />
                   </div>
                   <span>{aider.attributes.aiderLocation}</span>
                 </div>

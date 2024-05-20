@@ -21,7 +21,7 @@ function NavBar() {
         <div className="flex justify-between py-4 items-center w-[70%] m-auto">
           <div>
             <Link to={"/"}>
-              <img src="/src/assets/ubuntuAid-logo.svg" alt="ubuntuAid Logo" />
+              <img src="/ubuntuAid-logo.svg" alt="ubuntuAid Logo" />
             </Link>
           </div>
           <div className="flex gap-4">

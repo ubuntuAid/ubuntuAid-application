@@ -5,6 +5,7 @@ import './App.css'
 import About from './pages/About';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
+import ReviewForm from './pages/ReviewForm';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<SignUp />} />
+          <Route path='/reviewform' element={<ReviewForm />} />
           
     </Routes>
     </>
