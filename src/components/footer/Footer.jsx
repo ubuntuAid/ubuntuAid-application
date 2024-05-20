@@ -61,10 +61,10 @@ function Footer() {
                 </div>
                 <div>
                     <ul className='flex justify-between gap-5'>
-                    <li><img src="/src/assets/Facebook.svg" alt="UbuntuAid on Facebook" /></li>
-                    <li><img src="/src/assets/twitter.svg" alt="UbuntuAid on twitter" /></li>
-                    <li><img src="/src/assets/LinkedIn.svg" alt="UbuntuAid on LinkedIn" /></li>
-                    <li><img src="/src/assets/YouTube.svg" alt="UbuntuAid on YouTube" /></li>
+                    <li><img src="/Facebook.svg" alt="UbuntuAid on Facebook" /></li>
+                    <li><img src="/twitter.svg" alt="UbuntuAid on twitter" /></li>
+                    <li><img src="/LinkedIn.svg" alt="UbuntuAid on LinkedIn" /></li>
+                    <li><img src="/YouTube.svg" alt="UbuntuAid on YouTube" /></li>
                 </ul>
                 </div>
             </div>

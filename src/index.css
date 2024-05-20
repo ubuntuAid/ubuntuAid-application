@@ -13,7 +13,7 @@
 }
 /* Home-Page Hero Section BG Image */
 #bg_image{
-    background-image: url('/src/assets/UbuntuAid-Hero.png');
+    background-image: url('/UbuntuAid-Hero.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -34,18 +34,18 @@
   }
 
   #aiderhero{
-    background-image: url(/src/assets/Rectangle\ 23.png);
+    background-image: url('/sophia.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
   #hero{
-    background-image: url(/src/assets/about-Herobg.png);
+    background-image: url('/about-Herobg.png');
     background-repeat: no-repeat;
     background-size: cover;
   }
   #aboutImage{
-    background-image: url(/src/assets/Frame\ 13.png);
+    background-image: url('/aboutImage.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

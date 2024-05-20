@@ -42,7 +42,7 @@ function Aiders() {
                       <div className="flex gap-2">
                         <div>
                           <img
-                            src="/src/assets/exports/LinkSophia-Rating.png"
+                            src="/exports/LinkSophia-Rating.png"
                             alt="Rating"
                           />
                         </div>
@@ -64,7 +64,7 @@ function Aiders() {
                       </h3>
                       <div>
                         <img
-                          src="/src/assets/exports/info-circleInfo-Alert.png"
+                          src="/exports/info-circleInfo-Alert.png"
                           alt="info-circleInfo-Alert"
                         />
                       </div>
@@ -75,7 +75,7 @@ function Aiders() {
                     <div className="flex items-center gap-2">
                       <div>
                         <img
-                          src="/src/assets/exports/map-marker.png"
+                          src="/exports/map-marker.png"
                           alt="location icon"
                         />
                       </div>
@@ -100,11 +100,11 @@ function Aiders() {
                 </button>
                 <div className="flex justify-between gap-4">
                     <div className="flex gap-1">
-                      <img src="/src/assets/ic_sharp-phone.png" alt="" />
+                      <img src="/ic_sharp-phone.png" alt="" />
                     <span>{item.attributes.tel}</span>
                     </div>
                     <div className="flex gap-1">
-                      <img src="/src/assets/ooui_message.png" alt="" />
+                      <img src="/ooui_message.png" alt="" />
                     <a
                       target="_blank"
                       title="Watch The Hunt"
@@ -114,7 +114,7 @@ function Aiders() {
                     </a>
                     </div>
                     <div className="flex gap-1">
-                      <img src="/src/assets/mdi_web.png" alt="" />
+                      <img src="/mdi_web.png" alt="" />
                     <a
                       target="_blank"
                       title="Watch The Hunt"
