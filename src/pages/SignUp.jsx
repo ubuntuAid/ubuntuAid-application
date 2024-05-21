@@ -20,7 +20,7 @@ function SignUp() {
         <div className="h-1/4">
           <div className="flex justify-between items-center max-w-[70%] m-auto py-10">
             <Link to={"/"}>
-              <img src="/src/assets/ubuntuAid-logo.svg" alt="" />
+              <img src="/ubuntuAid-logo.svg" alt="" />
             </Link>
             <div className="md:flex gap-2 font-bold hidden text-[#0a72BA]">
               <svg

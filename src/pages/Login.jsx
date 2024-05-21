@@ -7,7 +7,7 @@ function Login() {
         <div className='md:flex md:h-screen justify-between items-center'>
             <div className='md:w-1/2 md:h-[100%] h-screen flex flex-col md:justify-around justify-evenly'>
                 <div className='flex justify-between items-center md:px-32 p-10'>
-                    <Link to={'/'}><img src="/src/assets/ubuntuAid-logo.svg" alt="" /></Link>
+                    <Link to={'/'}><img src="/ubuntuAid-logo.svg" alt="" /></Link>
                     <div className='md:flex gap-2 font-bold hidden text-[#0a72BA]'>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
@@ -29,7 +29,7 @@ function Login() {
                 <p className='text-center'>Need an account? <Link to={'/signup'} className='font-bold underline'>Sign Up Here</Link></p>
             </div>
             <div className='md:w-1/2 px-16 w-full md:flex hidden'>
-                <img src="/src/assets/signChildren.png" alt="" />
+                <img src="/signChildren.png" alt="" />
             </div>
         </div>
     )
