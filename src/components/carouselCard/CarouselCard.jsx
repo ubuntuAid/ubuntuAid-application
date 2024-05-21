@@ -65,7 +65,7 @@ function CarouselCard() {
 let [aiders, setAiders] = useState(null);
 
       function fetchData() {
-        let apiurl = "https://sacred-leader-4b40cb279f.strapiapp.com/api/ubuntu-aidercarouselcards?populate=*";
+        let apiurl = "https://ubuntuaid-backend.onrender.com/api/ubuntu-aidercarouselcards?populate=*";
         fetch(apiurl)
         .then((response) => {
           return response.json();
@@ -91,13 +91,13 @@ let [aiders, setAiders] = useState(null);
                     <div>
                           <div className="flex gap-5 mb-5">
                               <div>
-                                  <img src={`https://sacred-leader-4b40cb279f.strapiapp.com${item.attributes.profileImage.data.attributes.url}`} alt="AiderImage" />
+                                  <img src={`https://ubuntuaid-backend.onrender.com${item.attributes.profileImage.data.attributes.url}`} alt="AiderImage" />
                               </div>
                               <div>
                               <h1 className="text-xl font-bold text-[#0A72BA] mb-1">{item.attributes.AiderName}</h1>
                               <div className="flex gap-2">
                                   <div>
-                                      <img src={`https://sacred-leader-4b40cb279f.strapiapp.com${item.attributes.reviewerStars.data.attributes.url}`} alt="reviewStars" />
+                                      <img src={`https://ubuntuaid-backend.onrender.com${item.attributes.reviewerStars.data.attributes.url}`} alt="reviewStars" />
                                   </div>
                                   <p className="text-[#0A72BA]">
                                   {item.attributes.reviewsCount}{''} <span>{item.attributes.reviewsCount === 1 ? 'review' : 'reviews'}</span>
@@ -128,7 +128,7 @@ let [aiders, setAiders] = useState(null);
                         <p className="py-2 font-medium">{item.attributes.reviewTitle}</p>
                         <div className="flex items-center gap-2">
                             <div>
-                                <img src={`https://sacred-leader-4b40cb279f.strapiapp.com${item.attributes.reviewerStars.data.attributes.url}`} alt="reviewStars" />
+                                <img src={`https://ubuntuaid-backend.onrender.com${item.attributes.reviewerStars.data.attributes.url}`} alt="reviewStars" />
                             </div>
                             <p className="text-sm">
                             <span>By</span> <span className="pr-2">{item.attributes.reviewerName}</span>                       
