@@ -3,6 +3,7 @@ import CarouselCard from "../components/carouselCard/CarouselCard";
 import NavBar from "../components/navBar/NavBar";
 import Footer from "../components/footer/Footer";
 import { Link } from "react-router-dom";
+// import LawyerCarousel from "../components/carouselCard/LawyerCarousel";
 
 
 function HomePage() {
@@ -39,6 +40,7 @@ function HomePage() {
           UbuntuAiders ready to support you!
         </h1>
         <CarouselCard />
+        {/* <LawyerCarousel /> */}
       </section>
       <Footer />
       <ul>li*</ul>
