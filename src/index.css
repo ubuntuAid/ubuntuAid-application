@@ -50,3 +50,10 @@
     background-position: center;
     background-size: cover;
   }
+
+  .overlayImage{
+    background-image: url('/public/about-Herobg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

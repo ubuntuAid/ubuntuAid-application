@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react'
 import Slider from "react-slick";
+import { Link } from 'react-router-dom';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -139,7 +140,7 @@ let [aiders, setAiders] = useState(null);
                       </div>
                     </div>
                       <div>
-                          <button>Read More</button>
+                      <Link to={`/lawyer/${aiders.id}`} className="btn btn-primary">Read More</Link>
                       </div>
                 </div>
                 )

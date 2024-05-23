@@ -1,0 +1,83 @@
+// import React from 'react'
+
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+function NavBar() {
+//   const username = localStorage.getItem("username");
+  const navigate = useNavigate();
+
+  const handleSignOut = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("username");
+    navigate("/");
+  };
+  return (
+    <div className="h-48">
+      {/* Search & Language */}
+      <div className="flex justify-end w-[70%] m-auto border-b-2">
+        <div className="flex justify-between w-auto">
+          <span>
+            <i className="bx bx-search w-10 text-center text-xl py-1 mx-5 text-[#6AA84F] font-Roboto font-medium"></i>
+          </span>
+          <button className="text-center px-10 py-1 bg-[#F4F4F4] w-[12rem] text-[#6AA84F] font-Roboto font-medium">
+            English
+          </button>
+        </div>
+      </div>
+      {/* Logo and the two buttons */}
+      <div>
+        <div className="flex justify-between py-4 items-center w-[70%] m-auto">
+          <div>
+            <Link to={"/"}>
+              <img src="/ubuntuAid-logo.svg" alt="ubuntuAid Logo" />
+            </Link>
+          </div>
+          <div className="flex gap-4">
+            <button className="text-white bg-[#0072BC] px-2 py-1 rounded items-center gap-2 flex font-Roboto font-bold">
+              <span>
+                <i className="bx bx-heart"></i>
+              </span>
+              DONATE
+            </button>
+            <div className="relative">
+              <button className="text-white bg-[#6AA84F] px-4 py-1 rounded items-center gap-2 flex"><span><i className='bx bxs-user'></i></span>Emmanuel</button>
+              <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 hidden group-hover:block">
+                <p className="px-4 py-2 text-gray-700">Account Settings</p>
+                <p className="px-4 py-2 text-gray-700">
+                  You have 0 new Notifications
+                </p>
+                <p className="px-4 py-2 text-gray-700">Just for you</p>
+                <p className="px-4 py-2 text-gray-700">Saved</p>
+                <p className="px-4 py-2 text-gray-700">Asked Questions</p>
+                <p className="px-4 py-2 text-gray-700">Reviews</p>
+                <button
+                  onClick={handleSignOut}
+                  className="w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100"
+                >
+                  Sign Out
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Navigation Links */}
+      <div className="bg-[#6AA84F] my-3">
+        <ul className="flex item-center gap-16 mx-auto text-white py-3 w-[70%] font-Roboto font-bold">
+          <Link to={"/about"}>
+            <li>About UbuntuAid</li>
+          </Link>
+          <li>What We Do</li>
+          <Link to={"/ubuntuaiders"}>
+            <li>UbuntuAiders</li>
+          </Link>
+          <li>UbuntuAid Resource</li>
+          <li>Get Involved</li>
+        </ul>
+      </div>
+    </div>
+  );
+}
+
+export default NavBar;

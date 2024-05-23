@@ -43,7 +43,8 @@ const ReviewForm = () => {
 
   return (
     <>
-      <div className="max-w-[70%] m-auto ">
+    <div className="flex justify-between gap-36 max-w-[70%] m-auto py-10">
+      <div className="w-1/2">
         <h2>Leave a Review</h2>
         <Formik
           initialValues={{
@@ -98,7 +99,7 @@ const ReviewForm = () => {
                 <Field
                   type="text"
                   name="reviewTitle"
-                  className="w-1/2 border-2 border-gray-500 rounded px-2 py-1 my-2"
+                  className="w-full border-2 border-gray-500 rounded px-2 py-1 my-2"
                 />
                 <ErrorMessage name="reviewTitle" component="div" />
               </div>
@@ -109,16 +110,16 @@ const ReviewForm = () => {
                 <Field
                   as="textarea"
                   name="reviewBody"
-                  className="w-1/2 max-h-56 border-2 border-gray-500 rounded px-2 py-1 my-2"
+                  className="w-full max-h-56 border-2 border-gray-500 rounded px-2 py-1 my-2"
                 />
                 <ErrorMessage name="reviewBody" component="div" />
               </div>
 
-              <div>
+              <div className="my-2">
                 <label>
                   Was this a consultation or did you hire this lawyer?
                 </label>
-                <div>
+                <div >
                   <label className="mr-2">
                     <Field
                       type="radio"
@@ -141,7 +142,7 @@ const ReviewForm = () => {
                 <ErrorMessage name="consultationOrHired" component="div" />
               </div>
 
-              <div>
+              <div className="my-2">
                 <label>Would you recommend this lawyer?</label>
                 <div>
                   <label className="mr-2">
@@ -156,7 +157,7 @@ const ReviewForm = () => {
                 <ErrorMessage name="recommendLawyer" component="div" />
               </div>
 
-              <div>
+              <div className="my-2">
                 <label>Post your review anonymously?</label>
                 <div>
                   <label className="mr-2">
@@ -173,15 +174,15 @@ const ReviewForm = () => {
 
               {values.postAnonymously === "No" && (
                 <>
-                  <div>
-                    <label htmlFor="firstName">First Name</label>
-                    <Field type="text" name="firstName" />
+                  <div className="my-1">
+                    <label htmlFor="firstName">First Name</label><br />
+                    <Field type="text" name="firstName" className="w-full max-h-56 border-2 border-gray-500 rounded px-2 py-1 my-2"/>
                     <ErrorMessage name="firstName" component="div" />
                   </div>
 
                   <div>
-                    <label htmlFor="email">Email</label>
-                    <Field type="email" name="email" />
+                    <label htmlFor="email">Email</label><br />
+                    <Field type="email" name="email" className="w-full max-h-56 border-2 border-gray-500 rounded px-2 py-1 my-2"/>
                     <ErrorMessage name="email" component="div" />
                   </div>
                 </>
@@ -193,16 +194,20 @@ const ReviewForm = () => {
                   console.log("Captcha value:", value);
                   // Set the captcha value in Formik form
                 }}
+                className="my-5"
               />
 
-              <button type="submit" disabled={isSubmitting}>
+              <button type="submit" disabled={isSubmitting} className="w-full max-h-56 bg-[#6AA84D] text-white uppercase rounded px-2 py-2 my-5">
                 Submit
               </button>
             </Form>
           )}
         </Formik>
       </div>
-      <div></div>
+      <div className="w-1/2">
+        <p>Review Guideline</p>
+      </div>
+    </div>
     </>
   );
 };

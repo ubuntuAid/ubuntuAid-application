@@ -6,6 +6,7 @@ import About from './pages/About';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Reviews from './pages/Reviews';
+import LawyerDetail from './pages/LawyerDetail';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<SignUp />} />
           <Route path='/review' element={<Reviews />} />
+          <Route path="/lawyer/:id" component={LawyerDetail} />
           
     </Routes>
     </>
