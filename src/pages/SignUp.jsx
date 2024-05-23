@@ -152,7 +152,7 @@ function Signup() {
 
     try {
       const response = await fetch(
-        "http://localhost:1337/api/auth/local/register",
+        "https://ubuntuaid-backend.onrender.com/api/auth/local/register",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -267,7 +267,7 @@ function Signup() {
         <p className="text-center text-blue-500 hover:text-blue-800">
             Need an account?{" "}
             <Link to={"/login"} className="font-bold underline">
-              Sign Up Here
+              Sign In
             </Link>
           </p>
         </div>
@@ -284,7 +284,7 @@ function Signup() {
         </h2>
         <p className="mt-4">
           Join UbuntuAid in our vital mission to champion justice for refugees
-          worldwide. As a lawyer with UbuntuAid, you'll play a crucial role in
+          worldwide. As a lawyer with UbuntuAid, you will play a crucial role in
           defending the rights of displaced individuals, providing legal
           assistance to asylum seekers, and advocating for policies that uphold
           humanitarian principles and protect the most vulnerable.

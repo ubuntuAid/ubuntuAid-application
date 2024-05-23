@@ -203,6 +203,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+// import axios, { Axios } from "axios";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -218,11 +219,12 @@ function Login() {
   const handleSendCode = async () => {
     try {
       const response = await fetch(
-        "http://localhost:1337/api/auth/send-code",
+        "https://ubuntuaid-backend.onrender.com/api/auth/send-code",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ email }),
+          body: JSON.stringify({ 
+            identifier: email }),
         }
       );
       if (response.ok) {
@@ -239,11 +241,13 @@ function Login() {
   const handleLoginWithCode = async () => {
     try {
       const response = await fetch(
-        "http://localhost:1337/api/auth/login-with-code",
+        "https://ubuntuaid-backend.onrender.com/api/auth/login-with-code",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ email, code }),
+          body: JSON.stringify({ 
+            identifier: email, 
+            code: code }),
         }
       );
       if (response.ok) {
@@ -261,11 +265,14 @@ function Login() {
   const handleLoginWithPassword = async () => {
     try {
       const response = await fetch(
-        "http://localhost:1337/api/auth/local",
+        "https://ubuntuaid-backend.onrender.com/api/auth/local",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ identifier: email, password }),
+          body: JSON.stringify({ 
+            identifier: email, 
+            password: password 
+        }),
         }
       );
       if (response.ok) {
@@ -280,8 +287,17 @@ function Login() {
     }
   };
 
+
+  
+
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center overlayImage">
+    <div className="min-h-screen flex flex-col items-center justify-center overlayImage ">
+       <div className="md:m-auto m-5">
+       <div className="py-10">
+        <Link to={"/"} >
+          <img src="/ubuntuAid-logo-white.svg" alt="" width={'250'} />
+        </Link>
+        </div>
       <div className="bg-white shadow-md rounded-lg p-8 max-w-md w-full">
         <div className="mb-6">
           <h1 className="text-2xl font-bold text-center mb-2">Sign in</h1>
@@ -385,6 +401,7 @@ function Login() {
          
         </div>
       </div>
+       </div>
     </div>
   );
 }
