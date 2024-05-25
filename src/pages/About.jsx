@@ -2,12 +2,12 @@
 import Hero from "../components/aboutSections/Hero"
 import Section1 from "../components/aboutSections/Section1"
 import Footer from "../components/footer/Footer"
-import NavBar from "../components/navBar/NavBar"
+import Header from "../components/navBar/Header"
 
 function About() {
   return (
     <div>
-        <NavBar />
+        <Header />
         <Hero />
         <Section1 />
         <section className="p-20">

@@ -1,12 +1,12 @@
 import AiderHero from "../components/AiderHero";
 import Aiders from "../components/Aiders/Aiders";
-import NavBar from "../components/navBar/NavBar";
+import Header from "../components/navBar/NavBar";
 import Footer from "../components/footer/Footer";
 
 function UbuntuAiders() {
   return (
     <div>
-      <NavBar />
+      <Header />
       <AiderHero />
       <Aiders />
       <Footer />

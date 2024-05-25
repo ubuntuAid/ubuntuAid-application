@@ -6,8 +6,8 @@ function Footer() {
     <>
     <section className='bg-[#6AA84F] py-10'>
         <div className='max-w-[70%] m-auto text-white' id='footer'>
-            <div className='flex justify-between'>
-                <div>
+            <div className='md:flex justify-between'>
+                <div className='py-5 md:py-0'>
                     <h1>Browse Our Site</h1>
                     <ul>
                     <li>Find a Lawyer</li>
@@ -19,7 +19,7 @@ function Footer() {
                     <li>For Lawyers</li>
                     </ul>
                 </div>
-                <div>
+                <div className='py-5 md:py-0'>
                     <h1>Popular Locations</h1>
                     <ul>
                     <li>Kampala City Lawyers</li>
@@ -29,7 +29,7 @@ function Footer() {
                     <li>Soroti Lawyers</li>
                     </ul>
                 </div>
-                <div>
+                <div className='py-5 md:py-0'>
                     <h1>Popular Practice Areas</h1>
                     <ul>
                     <li>Refugee Education Lawyers</li>
@@ -40,7 +40,7 @@ function Footer() {
                     <li>Traffic Lawyers</li>
                     </ul>
                 </div>
-                <div>
+                <div className='py-5 md:py-0'>
                     <h1>About Us</h1>
                     <ul>
                     <li>About UbuntuAid</li>
@@ -51,16 +51,16 @@ function Footer() {
                 </div>
                 
             </div>
-            <div className='flex justify-between py-10'>
+            <div className='md:flex justify-between py-10'>
                 <div>
-                    <ul className='flex justify-between gap-5'>
-                        <li>Terms of Use</li> |
-                        <li>Privacy Policy</li>|
+                    <ul className='md:flex justify-between gap-5'>
+                        <li>Terms of Use</li> <span className='md:flex hidden'>|</span>
+                        <li>Privacy Policy</li><span className='md:flex hidden'>|</span>
                         <li>Community Guidelines</li>
                     </ul>
                 </div>
                 <div>
-                    <ul className='flex justify-between gap-5'>
+                    <ul className='flex md:justify-between gap-5 pt-5 md:pt-0'>
                     <li><img src="/Facebook.svg" alt="UbuntuAid on Facebook" /></li>
                     <li><img src="/twitter.svg" alt="UbuntuAid on twitter" /></li>
                     <li><img src="/LinkedIn.svg" alt="UbuntuAid on LinkedIn" /></li>
@@ -68,7 +68,7 @@ function Footer() {
                 </ul>
                 </div>
             </div>
-            <p>© UbuntuAid. All Rights Reserved 2024</p>
+            <p className='md:text-base text-sm'>© UbuntuAid. All Rights Reserved 2024</p>
         </div>
     </section>
 

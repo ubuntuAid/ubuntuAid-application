@@ -5,7 +5,7 @@ function Aiders() {
   let [aider, setAider] = useState(null);
 
   function fetchData() {
-    let apiurl = "https://ubuntuaid-backend.onrender.com/api/aiders?populate=*";
+    let apiurl = "http://localhost:1337/api/aiders?populate=*";
     fetch(apiurl)
       .then((response) => {
         return response.json();
@@ -29,7 +29,7 @@ function Aiders() {
                 <div className="flex gap-5 mb-5">
                   <div>
                     <img
-                      src={`https://ubuntuaid-backend.onrender.com${item.attributes.AiderImage.data.attributes.url}`}
+                      src={`http://localhost:1337${item.attributes.AiderImage.data.attributes.url}`}
                       alt=""
                       width={150}
                     />

@@ -52,8 +52,30 @@
   }
 
   .overlayImage{
-    background-image: url('/public/about-Herobg.png');
+    background-image: url('/about-Herobg.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  @media(max-width: 768px){
+    #bg_image{
+      background-image: url('/about-Herobg.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: calc(100dvh - 192px);
+  }
+  .about_text{
+    padding: 0;
+  }
+  #nav-text ul li{
+    padding: 16px;
+    border-bottom: 1px solid #6AA84F;
+    color: white;
+    cursor: pointer;
+  }
+  #nav-text ul li:hover{
+    background-color: #39aaf5;
+  }
   }

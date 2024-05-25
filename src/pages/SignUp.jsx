@@ -1,144 +1,16 @@
-// import { Link } from "react-router-dom";
-// import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-// import Caption from "../components/Caption";
-
-// function SignUp() {
-
-//   return (
-//     <div className="h-screen">
-//       {/* This the header section */}
-//       <section>
-//         <div className="h-1/4">
-//           <div className="flex justify-between items-center max-w-[70%] m-auto py-10">
-//             <Link to={"/"}>
-//               <img src="/ubuntuAid-logo.svg" alt="" />
-//             </Link>
-//             <div >
-//               <Link to={'/'}
-//               className="md:flex gap-2 font-bold hidden text-[#0a72BA]">
-//               <svg
-//                 xmlns="http://www.w3.org/2000/svg"
-//                 fill="none"
-//                 viewBox="0 0 24 24"
-//                 strokeWidth={1.5}
-//                 stroke="currentColor"
-//                 className="w-6 h-6"
-//               >
-//                 <path
-//                   strokeLinecap="round"
-//                   strokeLinejoin="round"
-//                   d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
-//                 />
-//               </svg>
-//               <p>Go Back</p>
-//               </Link>
-//             </div>
-//           </div>
-//         </div>
-//       </section>
-//       {/* This the body section */}
-//       <section>
-//         <div className="h-3/4">
-//           <div className="flex justify-between items-center md:max-w-[70%] m-auto gap-32 py-10">
-//             <div className="md:w-1/2 md:h-[100%] h-screen flex flex-col md:justify-around justify-evenly">
-//               <h1 className="md:text-4xl text-2xl font-bold mb-2">Sign in</h1>
-//               <form action="">
-//                 <input
-//                   type="text"
-//                   name="name"
-//                   id="name"
-//                   placeholder="Fullname"
-//                   className="w-full border-2 border-gray-500 rounded px-2 py-1 my-2"
-//                 />
-//                 <input
-//                   type="email"
-//                   name="email"
-//                   id="email"
-//                   placeholder="Email Address"
-//                   className="w-full border-2 border-gray-500 rounded px-2 py-1 my-2"
-//                 />
-//                 <input
-//                   type="password"
-//                   name="password"
-//                   id="password"
-//                   placeholder="Password"
-//                   className="w-full border-2 border-gray-500 rounded px-2 py-1 my-2"
-//                 />
-//                 <input
-//                   type="password"
-//                   name="password"
-//                   id="password"
-//                   placeholder="Confirm Password"
-//                   className="w-full border-2 border-gray-500 rounded px-2 py-1 my-2"
-//                 />
-//                 <button
-//                   type="submit"
-//                   className="w-full bg-[#0a72ba] rounded p-2 my-2 text-center font-medium text-white"
-//                 >
-//                   Sign Up
-//                 </button>
-//               </form>
-//               <div className="flex justify-between items-center my-5">
-//                 <hr className="w-1/2" />
-//                 <p className="px-4">or</p>
-//                 <hr className="w-1/2" />
-//               </div>
-//               <button className="w-full bg-[red] rounded p-2 my-2 text-center font-medium text-white">
-//                 Sign in with Google
-//               </button>
-//               <button className="w-full bg-[blue] rounded p-2 my-2 text-center font-medium text-white">
-//                 Sign in with Facebook
-//               </button>
-//               <div className="my-5">
-//                 <p className="text-center">We won’t auto-post to your account</p>
-//                 <p className="text-center w-96 mx-auto my-5">
-//                   By signing up, you agree to our
-//                   <Link to={"/"} className="underline">
-//                     Terms of Use,
-//                   </Link>
-//                   <Link to={"/"} className="underline">
-//                     Community Guidelines
-//                   </Link>{" "}
-//                   and
-//                   <Link to={"/"} className="underline">
-//                     Privacy Policy.
-//                   </Link>
-//                 </p>
-//               </div>
-//               <p className="text-center">
-//                 Already have an account?{" "}
-//                 <Link to={"/login"} className="font-bold underline">
-//                   Sign In Here
-//                 </Link>
-//               </p>
-//             </div>
-//             <div className="md:w-1/2 w-full md:flex flex-col hidden">
-//               {/* <Slider {...settings}> */}
-//                 <Caption />
-//               {/* </Slider> */}
-//             </div>
-//           </div>
-//         </div>
-//       </section>
-//     </div>
-//   );
-// }
-
-// export default SignUp;
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 function Signup() {
+  const [username, setUsername] = useState("");
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const navigate = useNavigate();
 
+  const handleUsernameChange = (e) => setUsername(e.target.value);
   const handleFullnameChange = (e) => setFullname(e.target.value);
   const handleEmailChange = (e) => setEmail(e.target.value);
   const handlePasswordChange = (e) => setPassword(e.target.value);
@@ -152,16 +24,17 @@ function Signup() {
 
     try {
       const response = await fetch(
-        "https://ubuntuaid-backend.onrender.com/api/auth/local/register",
+        "http://localhost:1337/api/auth/local/register",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ username: fullname, email, password }),
+          body: JSON.stringify({ username: username, email, password }),
         }
       );
       if (response.ok) {
         const data = await response.json();
         localStorage.setItem("token", data.jwt);
+        localStorage.setItem("username", data.user.username);
         navigate("/");
       } else {
         const errorData = await response.json();
@@ -173,12 +46,28 @@ function Signup() {
   };
 
   return (
-    <div className="min-h-screen flex gap-20 items-center justify-center bg-gray-50">
+    <div className="min-h-screen flex gap-20 items-center justify-center bg-emerald-300">
       <div></div>
       <div></div>
       <div className="bg-white shadow-md rounded-lg p-8 max-w-md w-full">
         <div className="mb-6">
           <h1 className="text-2xl font-bold text-center mb-2">Sign up</h1>
+        </div>
+        <div className="mb-4">
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="fullname"
+          >
+            Username
+          </label>
+          <input
+            type="text"
+            id="username"
+            value={username}
+            onChange={handleUsernameChange}
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="Username"
+          />
         </div>
         <div className="mb-4">
           <label
@@ -255,14 +144,14 @@ function Signup() {
           </button>
         </div>
         <hr className="my-4" />
-        <div className="flex md:flex-row flex-col gap-5 items-center mb-4">
+        {/* <div className="flex md:flex-row flex-col gap-5 items-center mb-4">
           <button className="bg-red-500 text-sm hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full mb-2">
             Sign in with Google
           </button>
           <button className="bg-blue-700 text-sm hover:bg-blue-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full">
             Sign in with Facebook
           </button>
-        </div>
+        </div> */}
         <div className="text-center mt-4">
         <p className="text-center text-blue-500 hover:text-blue-800">
             Need an account?{" "}

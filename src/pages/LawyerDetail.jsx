@@ -8,15 +8,16 @@ const LawyerDetail = () => {
   const [lawyer, setLawyer] = useState(null);
 
   useEffect(() => {
-    axios.get(`https://ubuntuaid-backend.onrender.com/lawyers/${id}`)
+    axios.get(`http://localhost:1337/api/lawyers/${id}`)
       .then(response => setLawyer(response.data))
       .catch(error => console.error(error));
   }, [id]);
 
-  if (!lawyer) return <div>Loading...</div>;
+  if (!lawyer) return <div className='text-black'>Loading...</div>;
 
   return (
     <div className="container">
+
       <h1>{lawyer.name}</h1>
       <img src={lawyer.image.url} alt={lawyer.name} className="img-fluid" />
       <div className="lawyer-details">

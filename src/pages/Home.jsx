@@ -1,13 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
+import Header from "../components/navBar/LoggedNav"
 import Footer from "../components/footer/Footer";
 import { Link } from "react-router-dom";
-// import CarouselCard from "../components/carouselCard/CarouselCard";
-import Header from "../components/navBar/NavBar"
-import LawyerCarousel from "../components/carouselCard/LawyerCarousel";
+import CarouselCard from "../components/carouselCard/CarouselCard";
+// import LawyerCarousel from "../components/carouselCard/LawyerCarousel";
 
 
 function HomePage() {
-  
   return (
     <div>
       <Header />
@@ -50,8 +49,8 @@ function HomePage() {
         <h1 className="text-center md:text-[3rem] text-3xl mb-10 md:px-0 px-10 font-bold text-[#6AA84D]">
           UbuntuAiders ready to support you!
         </h1>
-        {/* <CarouselCard /> */}
-        <LawyerCarousel />
+        <CarouselCard />
+        {/* <LawyerCarousel /> */}
       </section>
       <Footer />
     </div>
