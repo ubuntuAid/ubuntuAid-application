@@ -10,6 +10,7 @@ import LawyerDetail from './pages/LawyerDetail';
 import Home from './pages/Home'
 import ReviewForm from './components/reviews/ReviewForm';
 
+
 function App() {
   return (
     <>
@@ -20,10 +21,10 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<SignUp />} />
-
           <Route path='/review' element={<ReviewForm />} />
-          <Route path="/lawyers/:id" element={<LawyerDetail />} />
-    </Routes>
+          <Route path="/lawyer/:id" element={<LawyerDetail />} />
+          
+      </Routes>
     </>
   )
 }

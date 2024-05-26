@@ -43,10 +43,10 @@ function HomePage() {
       <section className="md:p-20 p-14 bg-[#0A72BA]">
             <div className="md:max-w-[70%]] m-auto">
             <h1 className="text-center md:text-6xl font-bold text-4xl"><span className="text-[#2e2e2e]">Ubuntu-Aid:</span> <span className="text-white">u·boon·too - Aid</span></h1>
-            <p className="text-center text-white md:px-56 md:py-8 py-5">Ubuntu; pronounced as u.boon.too simply means “Humanity to others”. UbuntuAid was coined to mean Aid to Humans specifically to the People who are displaced and seeking asylum. We are bringing the Ubuntu Spirit to the World of Refugees and Asylum Seekers</p>
+            <p className="text-center text-white md:px-56 md:py-8 py-5 text-2xl">Ubuntu; pronounced as u.boon.too simply means “Humanity to others”. UbuntuAid was coined to mean Aid to Humans specifically to the People who are displaced and seeking asylum. We are bringing the Ubuntu Spirit to the World of Refugees and Asylum Seekers</p>
             </div>
         </section>
-      <section className="md:my-40 my-14">
+      <section className="md:py-40 py-14">
         <h1 className="text-center md:text-[3rem] text-3xl mb-10 md:px-0 px-10 font-bold text-[#6AA84D]">
           UbuntuAiders ready to support you!
         </h1>
