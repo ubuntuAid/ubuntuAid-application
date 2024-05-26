@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+
 import { useEffect, useState } from "react";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
@@ -92,16 +93,6 @@ function LawyerCarousel() {
       <Slider {...settings}>
         {lawyers !== null ? (
           lawyers.map((lawyer) => {
-            const reviews = lawyer.attributes.reviews.data;
-
-            // Sort reviews by publishedAt date in descending order
-            const sortedReviews = reviews.sort((a, b) => {
-              return new Date(b.attributes.publishedAt) - new Date(a.attributes.publishedAt);
-            });
-
-            // Select the most recent review
-            const mostRecentReview = sortedReviews[0];
-
             return (
               <div
                 key={lawyer.id}
@@ -119,18 +110,27 @@ function LawyerCarousel() {
                       <h1 className="text-xl font-bold text-[#0A72BA] mb-1">
                         {lawyer?.attributes?.name}
                       </h1>
-                      {mostRecentReview && (
-                        <div className="flex gap-2 my-2">
-                          <div className="flex gap-2">
-                            {Array.from({ length: mostRecentReview.attributes.rating }).map((_, starIndex) => (
-                              <FaStar key={starIndex} size={16} color={colors.orange} />
-                            ))}
-                          </div>
-                          <p className="text-[#0A72BA]">
-                            {/* Reviews counted */}
-                          </p>
+                      <div className="flex gap-2 my-2">
+                        <div>
+                          {lawyer.attributes.reviews.data.map((review) => (
+                            <div key={review.id} className="flex gap-2">
+                              {Array.from({
+                                length: review.attributes.rating,
+                              }).map((_, starIndex) => (
+                                <FaStar
+                                  key={starIndex}
+                                  size={16}
+                                  color={colors.orange}
+                                />
+                              ))}
+                            </div>
+                          ))}
                         </div>
-                      )}
+                        <p className="text-[#0A72BA]">
+                          {/* Reviews counted */}
+                        </p>
+                      </div>
+
                       <div className="flex justify-between items-center gap-3 my-1 w-full">
                         <h3 className=" text-sm">
                           <span>UbuntuRating</span>{" "}
@@ -140,49 +140,62 @@ function LawyerCarousel() {
                       </div>
 
                       <div className="my-1">
-                        <h3 className="uppercase font-bold text-[#6AA84F]">Location</h3>
-                        <div className="flex items-center gap-2">
-                          <i className="bx bxs-map text-base"></i>
-                          <p>{lawyer.attributes.location}</p>
-                        </div>
+                      <h3 className="uppercase font-bold text-[#6AA84F]">Location</h3>
+                      <div className="flex items-center gap-2">
+                        <i className="bx bxs-map text-base"></i>
+                        <p>{lawyer.attributes.location}</p>
                       </div>
+                      </div>
+
                     </div>
                   </div>
                   <div className="border-b border-gray-200">
                     <h3 className="font-semibold">PRACTICE AREA</h3>
                     <h4 className="pb-1">{lawyer.attributes.practice}</h4>
                   </div>
-                  {mostRecentReview && (
+                  <div>
                     <div className="flex items-center gap-2">
-                      <div className="flex flex-col gap-2">
-                        <p className="my-2 font-medium leading-tight">
-                          {mostRecentReview.attributes?.title || ""}
-                        </p>
-                        <div className="flex gap-4 items-center">
-                          <div className="flex">
-                            {Array.from({ length: mostRecentReview.attributes.rating }).map((_, starIndex) => (
-                              <FaStar key={starIndex} size={16} color={colors.orange} />
-                            ))}
+                      <div>
+                        {lawyer.attributes.reviews.data.map((review) => (
+                          <div key={review.id} className="flex flex-col gap-2">
+                            <p className="my-2 font-medium leading-tight">
+                              {review.attributes?.title || ""}
+                            </p>
+                            <div className="flex  gap-4 items-center">
+                              <div className="flex">
+                                {Array.from({
+                                  length: review.attributes.rating,
+                                }).map((_, starIndex) => (
+                                  <FaStar
+                                    key={starIndex}
+                                    size={16}
+                                    color={colors.orange}
+                                  />
+                                ))}
+                              </div>
+                              <div className="flex justify-between md:gap-2 flex-wrap text-sm">
+                                <span className="">
+                                 By {review.attributes?.firstName || ""}
+                                </span>
+                                <span>
+                                  {review.attributes?.publishedAt || ""}
+                                </span>
+                              </div>
+                            </div>
+                            <div>
+                              <p>{review.attributes.reviewbody}</p>
+                            </div>
                           </div>
-                          <div className="flex justify-between md:gap-2 flex-wrap text-sm">
-                            <span>
-                              By {mostRecentReview.attributes?.firstName || ""}
-                            </span>
-                            <span>
-                              {mostRecentReview.attributes?.publishedAt || ""}
-                            </span>
-                          </div>
-                        </div>
-                        <div>
-                          <p>{mostRecentReview.attributes.reviewbody}</p>
-                        </div>
+                        ))}
                       </div>
                     </div>
-                  )}
+                  </div>
                 </div>
                 <div className="my-2 text-[#0A72BA]">
                   {/* Routes to the Single Lawyer page with their details */}
-                  <Link to={`/lawyers/${lawyer.id}`}>Read More</Link>
+                  <Link to={`/lawyers/${lawyer.id}`}>
+                    Read More
+                  </Link>
                 </div>
               </div>
             );
