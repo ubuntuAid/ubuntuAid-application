@@ -87,6 +87,44 @@ function LawyerCarousel() {
     fetchData();
   }, []);
 
+  // Function to convert the publishedAt Date format and pick only Month and year
+  const renderPublishedAt = (publishedAt) => {
+    const date = new Date(publishedAt);
+    const options = { month: 'long', year: 'numeric' };
+    return date.toLocaleDateString('en-US', options);
+  };
+
+  // Function to render a short review body
+  const RenderReviewBody = ({ reviewBody }) => {
+    const [expanded, setExpanded] = useState(false);
+    const maxWords = 20;
+  
+    const toggleExpanded = () => {
+      setExpanded(!expanded);
+    };
+  
+    const renderShortenedReviewBody = () => {
+      const words = reviewBody.split(' ');
+      const shortenedText = words.slice(0, maxWords).join(' ');
+      const expandable = words.length > maxWords;
+  
+      return (
+        <>
+          {shortenedText}
+          {expandable && <span onClick={toggleExpanded} style={{ cursor: 'pointer' }}>...</span>}
+        </>
+      );
+    };
+  
+    return (
+      <div>
+        <p>
+          {expanded ? reviewBody : renderShortenedReviewBody()}
+        </p>
+      </div>
+    );
+  };
+
   return (
     <div className="w-[70%] m-auto">
       <Slider {...settings}>
@@ -101,6 +139,19 @@ function LawyerCarousel() {
 
             // Select the most recent review
             const mostRecentReview = sortedReviews[0];
+
+            // Count the number of reviews
+            const reviewCount = reviews.length;
+
+            const renderStars = (rating) => {
+              return Array.from({ length: 5 }).map((_, index) => (
+                <FaStar
+                  key={index}
+                  size={16}
+                  color={index < rating ? colors.orange : colors.grey}
+                />
+              ));
+            };
 
             return (
               <div
@@ -120,23 +171,21 @@ function LawyerCarousel() {
                         {lawyer?.attributes?.name}
                       </h1>
                       {mostRecentReview && (
-                        <div className="flex gap-2 my-2">
-                          <div className="flex gap-2">
-                            {Array.from({ length: mostRecentReview.attributes.rating }).map((_, starIndex) => (
-                              <FaStar key={starIndex} size={16} color={colors.orange} />
-                            ))}
+                        <div className="md:flex gap-2 my-2 justify-between items-center">
+                          <div className="flex">
+                            {renderStars(mostRecentReview.attributes.rating)}
                           </div>
                           <p className="text-[#0A72BA]">
-                            {/* Reviews counted */}
+                            {reviewCount} {reviewCount === 1 ? 'review' : 'reviews'}
                           </p>
                         </div>
                       )}
-                      <div className="flex justify-between items-center gap-3 my-1 w-full">
+                      <div className="md:flex md:justify-between items-center gap-3 my-1 w-full">
                         <h3 className=" text-sm">
                           <span>UbuntuRating</span>{" "}
-                          <span>{lawyer.attributes.ubunturating}</span>
+                          <span className="font-bold">{lawyer.attributes.ubunturating}</span>
                         </h3>
-                        <i className="bx bxs-info-circle text-base"></i>
+                        <i className="bx bxs-info-circle text-base text-[#0A72BA]"></i>
                       </div>
 
                       <div className="my-1">
@@ -155,26 +204,24 @@ function LawyerCarousel() {
                   {mostRecentReview && (
                     <div className="flex items-center gap-2">
                       <div className="flex flex-col gap-2">
-                        <p className="my-2 font-medium leading-tight">
+                        <p className="mt-5 mb-2 font-medium leading-tight">
                           {mostRecentReview.attributes?.title || ""}
                         </p>
-                        <div className="flex gap-4 items-center">
+                        <div className="flex gap-2 items-center">
                           <div className="flex">
-                            {Array.from({ length: mostRecentReview.attributes.rating }).map((_, starIndex) => (
-                              <FaStar key={starIndex} size={16} color={colors.orange} />
-                            ))}
+                            {renderStars(mostRecentReview.attributes.rating)}
                           </div>
                           <div className="flex justify-between md:gap-2 flex-wrap text-sm">
-                            <span>
+                            <p>
                               By {mostRecentReview.attributes?.firstName || ""}
-                            </span>
+                            </p>
                             <span>
-                              {mostRecentReview.attributes?.publishedAt || ""}
+                              {renderPublishedAt(mostRecentReview.attributes.publishedAt)}
                             </span>
                           </div>
                         </div>
                         <div>
-                          <p>{mostRecentReview.attributes.reviewbody}</p>
+                          <RenderReviewBody reviewBody={mostRecentReview.attributes.reviewbody} />
                         </div>
                       </div>
                     </div>
@@ -182,7 +229,7 @@ function LawyerCarousel() {
                 </div>
                 <div className="my-2 text-[#0A72BA]">
                   {/* Routes to the Single Lawyer page with their details */}
-                  <Link to={`/lawyers/${lawyer.id}`}>Read More</Link>
+                  <Link to={`/lawyer/${lawyer.id}`}>Read More</Link>
                 </div>
               </div>
             );

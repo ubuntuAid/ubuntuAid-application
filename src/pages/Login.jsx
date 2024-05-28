@@ -438,7 +438,7 @@ function Login() {
       if (response.ok) {
         const data = await response.json();
         localStorage.setItem("token", data.jwt);
-        navigate("/logged_in=true");
+        navigate("/");
       } else {
         alert("Invalid email or password.");
       }
