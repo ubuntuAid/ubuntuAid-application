@@ -1,14 +1,15 @@
 import Footer from "../components/footer/Footer"
-import Header from "../components/navBar/LoggedNav"
+import NavBar from "../components/navBar/NavBar"
 import ReviewForm from "../components/reviews/ReviewForm"
+import { AuthProvider } from "../contexts/AuthContext"; // Ensure correct import path
 
 function Reviews() {
   return (
-    <>
-    <Header />
-    <ReviewForm />
-    <Footer />
-    </>
+    <AuthProvider>
+      <NavBar />
+      <ReviewForm />
+      <Footer />
+    </AuthProvider>
   )
 }
 

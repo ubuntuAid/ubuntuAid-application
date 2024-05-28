@@ -171,7 +171,7 @@ function LawyerCarousel() {
                         {lawyer?.attributes?.name}
                       </h1>
                       {mostRecentReview && (
-                        <div className="flex gap-2 my-2 justify-between items-center">
+                        <div className="md:flex gap-2 my-2 justify-between items-center">
                           <div className="flex">
                             {renderStars(mostRecentReview.attributes.rating)}
                           </div>
@@ -180,10 +180,10 @@ function LawyerCarousel() {
                           </p>
                         </div>
                       )}
-                      <div className="flex justify-between items-center gap-3 my-1 w-full">
+                      <div className="md:flex md:justify-between items-center gap-3 my-1 w-full">
                         <h3 className=" text-sm">
                           <span>UbuntuRating</span>{" "}
-                          <span>{lawyer.attributes.ubunturating}</span>
+                          <span className="font-bold">{lawyer.attributes.ubunturating}</span>
                         </h3>
                         <i className="bx bxs-info-circle text-base text-[#0A72BA]"></i>
                       </div>

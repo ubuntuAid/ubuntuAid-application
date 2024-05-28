@@ -1,16 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
 import Footer from "../components/footer/Footer";
 import { Link } from "react-router-dom";
-// import CarouselCard from "../components/carouselCard/CarouselCard";
-import Header from "../components/navBar/NavBar"
+import NavBar from "../components/navBar/NavBar"
 import LawyerCarousel from "../components/carouselCard/LawyerCarousel";
+import { AuthProvider } from "../contexts/AuthContext"; // Ensure correct import path
 
 
 function HomePage() {
   
   return (
-    <div>
-      <Header />
+    <AuthProvider>
+      <NavBar />
       {/* This is the Hero Section of the Landing Page */}
       <section id="bg_image" className="flex justify-evenly items-center">
         <div className="md:w-[70%] p-8">
@@ -54,7 +54,7 @@ function HomePage() {
         <LawyerCarousel />
       </section>
       <Footer />
-    </div>
+    </AuthProvider>
   );
 }
 

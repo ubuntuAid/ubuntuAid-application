@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { FaStar } from "react-icons/fa";
-import Header from "../navBar/Header"
 
 const colors = {
   orange: "#6AA84D",
@@ -98,7 +97,6 @@ const ReviewForm = () => {
 
   return (
     <>
-    <Header />
       <div className="md:flex justify-between gap-36 md:max-w-[70%] md:mx-auto py-10 mx-14">
       <div className="md:w-1/2 w-full">
         <h2>Leave a Review</h2>
