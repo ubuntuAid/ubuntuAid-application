@@ -119,7 +119,7 @@ function NavBar() {
                     className="text-white bg-[#6AA84F] px-4 py-2 rounded items-center gap-2 flex justify-between w-full"
                     >
                     <span>
-                        <i className="bx bxs-user-plusnpm"></i>
+                        <i className="bx bxs-user-plus"></i>
                     </span>
                     <span>Sign In</span>
                     </Link>
@@ -130,7 +130,7 @@ function NavBar() {
       </div>
       {/* Desktop Navigation Links */}
       <div className="bg-[#6AA84F] my-4 md:flex hidden">
-        <ul className="flex item-center gap-16 mx-auto text-white py-4 w-[70%] font-Roboto font-bold">
+        <ul className="flex items-center gap-16 mx-auto text-white h-12 w-[70%] font-Roboto font-bold">
           <Link to={"/about"}>
             <li>About UbuntuAid</li>
           </Link>
