@@ -73,7 +73,7 @@ function LawyerCarousel() {
     async function fetchData() {
       try {
         const response = await fetch(
-          "http://localhost:1337/api/lawyers?populate=*"
+          "https://ubuntuaid-backend.onrender.com/api/lawyers?populate=*"
         );
         const dataObject = await response.json();
         let lawyerData = dataObject.data;
@@ -162,7 +162,7 @@ function LawyerCarousel() {
                   <div className="flex gap-5 mb-5">
                     <div>
                       <img
-                        src={`http://localhost:1337${lawyer.attributes.profile.data.attributes.url}`}
+                        src={`https://ubuntuaid-backend.onrender.com${lawyer.attributes.profile.data.attributes.url}`}
                         alt="Lawyer Image"
                       />
                     </div>

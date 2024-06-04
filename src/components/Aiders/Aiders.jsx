@@ -5,7 +5,7 @@ function Aiders() {
   let [aider, setAider] = useState(null);
 
   function fetchData() {
-    let apiurl = "http://localhost:1337/api/aiders?populate=*";
+    let apiurl = "https://ubuntuaid-backend.onrender.com/api/aiders?populate=*";
     fetch(apiurl)
       .then((response) => {
         return response.json();

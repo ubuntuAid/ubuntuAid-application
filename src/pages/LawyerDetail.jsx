@@ -25,7 +25,7 @@ const LawyerDetail = () => {
   useEffect(() => {
     if (id) {
       axios
-        .get(`http://localhost:1337/api/lawyers/${id}?populate=*`)
+        .get(`https://ubuntuaid-backend.onrender.com/api/lawyers/${id}?populate=*`)
         .then((response) => setLawyer(response.data.data))
         .catch((error) => console.error(error));
     } else {
@@ -181,7 +181,7 @@ const LawyerDetail = () => {
               <div>
                 {profile?.data?.attributes?.url && (
                   <img
-                    src={`http://localhost:1337${profile.data.attributes.url}`}
+                    src={`https://ubuntuaid-backend.onrender.com${profile.data.attributes.url}`}
                     alt={name}
                     className="img-fluid"
                   />
