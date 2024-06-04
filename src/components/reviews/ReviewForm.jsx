@@ -78,7 +78,7 @@ const ReviewForm = () => {
     };
   
     try {
-      const response = await axios.post("http://localhost:1337/api/reviews", formData);
+      const response = await axios.post("https://ubuntuaid-backend.onrender.com/api/reviews", formData);
       console.log("Review submitted successfully:", response.data);
       // Reset form
       setCurrentValue(0);

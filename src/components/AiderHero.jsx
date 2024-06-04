@@ -5,7 +5,7 @@ function AiderHero() {
 
   useEffect(() => {
     function fetchData() {
-      let apiurl = "http://localhost:1337/api/ubuntu-aidercarouselcards/4";
+      let apiurl = "https://ubuntuaid-backend.onrender.com/api/ubuntu-aidercarouselcards/4";
       fetch(apiurl)
         .then((response) => response.json())
         .then((dataObject) => {
