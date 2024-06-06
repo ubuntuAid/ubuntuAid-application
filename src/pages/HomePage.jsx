@@ -12,7 +12,7 @@ function HomePage() {
       {/* This is the Hero Section of the Landing Page */}
       <section id="bg_image"className="flex items-center">
         <div className="m-auto md:w-[70%]">
-          <div className="2xl:w-1/2">
+          <div className="2xl:w-1/2 lg:w-3/4">
             <h1 className="lg:text-7xl md:text-5xl text-2xl font-black text-white mb-5 md:leading-[1.15]">
               Restoring Hope, Building Futures
             </h1>
