@@ -8,7 +8,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (token) {
-      fetch("http://localhost:1337/api/users/me", {
+      fetch("https://ubuntuaid-backend.onrender.com/api/users/me", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
