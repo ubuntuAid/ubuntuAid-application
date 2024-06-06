@@ -18,7 +18,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: calc(100dvh - 192px);
+    height: 100dvh;
 }
 .slick-slide > div {
     margin: 0 10px;
