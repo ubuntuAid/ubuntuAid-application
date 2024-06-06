@@ -24,7 +24,7 @@ const ReviewForm = () => {
   useEffect(() => {
     const fetchLawyers = async () => {
       try {
-        const response = await axios.get("http://localhost:1337/api/lawyers");
+        const response = await axios.get("https://ubuntuaid-backend.onrender.com/api/lawyers");
         setLawyers(response.data.data);
       } catch (error) {
         console.error("Error fetching lawyers:", error);

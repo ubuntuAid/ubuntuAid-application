@@ -219,7 +219,7 @@
 //   // const handleSendCode = async () => {
 //   //   try {
 //   //     const response = await fetch(
-//   //       "http://localhost:1337/api/auth/send-code",
+//   //       "https://ubuntuaid-backend.onrender.com/api/auth/send-code",
 //   //       {
 //   //         method: "POST",
 //   //         headers: { "Content-Type": "application/json" },
@@ -241,7 +241,7 @@
 //   // const handleLoginWithCode = async () => {
 //   //   try {
 //   //     const response = await fetch(
-//   //       "http://localhost:1337/api/auth/login-with-code",
+//   //       "https://ubuntuaid-backend.onrender.com/api/auth/login-with-code",
 //   //       {
 //   //         method: "POST",
 //   //         headers: { "Content-Type": "application/json" },
@@ -265,7 +265,7 @@
 //   const handleLoginWithPassword = async () => {
 //     try {
 //       const response = await fetch(
-//         "http://localhost:1337/api/auth/local",
+//         "https://ubuntuaid-backend.onrender.com/api/auth/local",
 //         {
 //           method: "POST",
 //           headers: { "Content-Type": "application/json" },
