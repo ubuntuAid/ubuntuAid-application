@@ -13,7 +13,7 @@ function HomePage() {
       <section id="bg_image" className="flex justify-evenly items-center">
         <div className="md:w-[70%] p-8">
           <div className="md:flex-1 md:w-1/2 ">
-            <h1 className="lg:text-7xl text-2xl font-black text-white mb-5 md:leading-[1.15]">
+            <h1 className="lg:text-7xl md:text-5xl text-2xl font-black text-white mb-5 md:leading-[1.15]">
               Restoring Hope, Building Futures
             </h1>
             <p className="text-xl mb-5 text-white">
